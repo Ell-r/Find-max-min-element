@@ -47,5 +47,11 @@ int main() {
 		int* Array = newArray(Size);
 		initArray(Array, Size);
 		int (*findElement[2])(int, int*) = { findMinElement, findMaxElement };
+		cout << "Оберіть:\n1-Пошук мінімального елемента\n2-Пошук максимального елемента масива\n3-Закінчити\n-";
+		cin >> choise;
+		if (choise == 3) {
+			break;
+		}
+		cout << "Результат.\n Елемент: " << findElement[choise - 1](Size, Array) << endl;
 	}
 }

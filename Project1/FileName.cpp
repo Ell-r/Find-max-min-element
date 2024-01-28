@@ -12,6 +12,12 @@ int* newArray(int size) {
 	return array;
 }
 
+void initArray(int* array, int size) {
+	cout << "¬вед≥ть значенн€ дл€ масива: ";
+	for (int i = 0; i < size; i++) {
+		cin >> array[i];
+	}
+}
 
 int main() {
 	setlocale(LC_ALL, "rus");
@@ -19,5 +25,6 @@ int main() {
 	while (true) {
 		Size = inSize(Size);
 		int* Array = newArray(Size);
+		initArray(Array, Size);
 	}
 }
